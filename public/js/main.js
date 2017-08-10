@@ -6,13 +6,15 @@ $(document).ready(function() {
 
 
 function openContainer(div){
+	
 	div = '#' + div
-	$('#details > div').each(function(i,item){
-		$(item).hide();
-	});
-	$(div).show();
-	
-	
+	if ($(div).hasClass('act')){
+		$(div).slideToggle(900);
+	}else{
+		$('#details >div.act').slideUp(900).removeClass('act');
+		$(div).slideDown(900);
+		$(div).addClass('act');
+	}
 }
 
 function enviar(){

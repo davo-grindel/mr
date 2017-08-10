@@ -4,8 +4,17 @@ body {
 	background-color: black;
 }
 
+/* footer */
+
 .footer {
-	background-color: gray;
+	background-color: #2e3436;
+	color: white;
+}
+
+.sub-footer {
+	background-color: #333333;
+	width: 90%;
+
 }
 
 .central-body {
@@ -19,11 +28,32 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#808080',GradientType=0 ); /* ie6-9 */
 }
 
-/* Commons */
+/* Menu navbar-brand*/
+#navbar{
+	padding-top: 1%;
+	padding-bottom: 1%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+    flex-direction: row;
+	height: auto;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+
 
 .navbar-brand {
 	height: auto !important;
 }
+.nav-img{
+	padding-left: 10%;
+	-webkit-align-self: flex-start;
+   align-self: flex-start;
+}
+
+/* Commons */
 
 .display-block {
 	display: block;
@@ -39,7 +69,7 @@ body {
 
 .details-box{
 	background-color: white;
-}
+	}
 
 * {box-sizing:border-box}
 
