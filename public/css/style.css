@@ -37,12 +37,17 @@ body {
 	-webkit-flex-direction: row;
     flex-direction: row;
 	height: auto;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
+	border-top: 3px solid orange;
 }
 
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: orange !important;
+	color: white;
+}
 
+.nav>li>a{
+	color: white !important;
+}
 
 .navbar-brand {
 	height: auto !important;
@@ -53,7 +58,24 @@ body {
    align-self: flex-start;
 }
 
+.menu{
+	align-self: center;
+	margin-left: auto;
+}
+
 /* Commons */
+
+.hover:hover{
+	background-color: gray;
+	color: white;
+	cursor: pointer;
+}
+
+hr{
+	color: gray;
+	border: 3px solid;
+	width: 90%;
+}
 
 .display-block {
 	display: block;
@@ -264,13 +286,25 @@ body {
 .flex-item {
     background-color: white;
     width: 24%;
-    height: 23em;
+    height: 25em;
     margin: 2%;
  }
 
 .box-flex {
 	padding-bottom: 2%;
 	padding-top: 5%;
+}
+
+img.flex-item{
+	height: auto !important;
+}
+
+.box-flex h2{
+	color:orange;
+}
+
+.padding-botton-1{
+	padding-bottom: 1%;
 }
 
 @media screen and (max-width: 880px) {

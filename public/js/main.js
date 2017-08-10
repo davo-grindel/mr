@@ -4,7 +4,6 @@ $(document).ready(function() {
 	
 });
 
-
 function openContainer(div){
 	
 	div = '#' + div
