@@ -13,6 +13,7 @@ function openContainer(div){
 		$('#details >div.act').slideUp(900).removeClass('act');
 		$(div).slideDown(900);
 		$(div).addClass('act');
+		$(div).css('outline',0).attr('tabindex',-1).focus();
 	}
 }
 

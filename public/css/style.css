@@ -307,6 +307,24 @@ img.flex-item{
 	padding-bottom: 1%;
 }
 
+/* FORMS */
+
+input[type=text]{
+	background-color: #303030;
+	margin: 0 3px 3px 3px;
+	color: white;
+	border: 0px;
+    border-radius: 6px;
+}
+
+textarea {
+	background-color: #303030;
+	margin: 0 3px 3px 3px;
+	color: white;
+	border: 0px;
+    border-radius: 6px;
+}
+
 @media screen and (max-width: 880px) {
 	.flex-item {
 		width: 50%;
