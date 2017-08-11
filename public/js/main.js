@@ -6,15 +6,20 @@ $(document).ready(function() {
 
 function openContainer(div){
 	
-	div = '#' + div
+	div = '#' + div;
 	if ($(div).hasClass('act')){
 		$(div).slideToggle(900);
 	}else{
 		$('#details >div.act').slideUp(900).removeClass('act');
 		$(div).slideDown(900);
 		$(div).addClass('act');
-		$(div).css('outline',0).attr('tabindex',-1).focus();
+		$('html,body').animate({scrollTop: $(div).offset().top},900);
 	}
+}
+
+function navBar(element){
+	div = '#' + element;
+	$('html,body').animate({scrollTop: $(div).offset().top},900);
 }
 
 function enviar(){
@@ -24,4 +29,8 @@ function enviar(){
 	comment = $("#comment").val();
 	
 	alert(name + " "+ email + " "+ title + " " + comment);
+}
+
+function openModal(){
+	$("#myModal").modal();
 }

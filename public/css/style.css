@@ -71,6 +71,10 @@ body {
 	cursor: pointer;
 }
 
+.hover{
+	border-style: ridge;	
+}
+
 hr{
 	color: gray;
 	border: 3px solid;
@@ -91,6 +95,10 @@ hr{
 
 .details-box{
 	background-color: white;
+}
+
+#details p a:hover{
+	cursor: pointer;
 }
 
 .img-container{
@@ -239,22 +247,6 @@ hr{
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 /* Fading animation */
 .fades {
   -webkit-animation-name: fade;
@@ -293,39 +285,42 @@ hr{
 .box-flex {
 	padding-bottom: 2%;
 	padding-top: 5%;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 
 img.flex-item{
 	height: auto !important;
 }
 
-.box-flex h2{
+.box-flex h1{
 	color:orange;
+	text-transform: uppercase;
 }
 
 .padding-botton-1{
-	padding-bottom: 1%;
+	padding-bottom: 2%;
 }
 
 /* FORMS */
 
 input[type=text]{
-	background-color: #303030;
-	margin: 0 3px 3px 3px;
+	background-color: #191919;
+	margin: 0 5px 5px 5px;
 	color: white;
 	border: 0px;
     border-radius: 6px;
 }
 
 textarea {
-	background-color: #303030;
-	margin: 0 3px 3px 3px;
+	background-color: #191919;
+	margin: 0 5px 5px 5px;
 	color: white;
 	border: 0px;
     border-radius: 6px;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 900px) {
 	.flex-item {
 		width: 50%;
 	}
