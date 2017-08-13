@@ -31,6 +31,7 @@ function enviar(){
 	alert(name + " "+ email + " "+ title + " " + comment);
 }
 
-function openModal(){
-	$("#myModal").modal();
+function openModal(modal){
+	modal = '#' + modal
+	$(modal).modal({keyboard: true});
 }

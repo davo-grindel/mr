@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 body {
-	background-color: black;
+	background-color: #333333;
+	padding-top: 8%;
 }
 
 /* footer */
@@ -38,6 +39,7 @@ body {
     flex-direction: row;
 	height: auto;
 	border-top: 3px solid orange;
+	background-color: black;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
@@ -65,19 +67,17 @@ body {
 
 /* Commons */
 
-.hover:hover{
-	background-color: gray;
-	color: white;
+#slide img:hover {
 	cursor: pointer;
 }
 
-.hover{
-	border-style: ridge;	
+.hover:hover{
+	cursor: pointer;
 }
 
 hr{
 	color: gray;
-	border: 3px solid;
+	border: 1px solid;
 	width: 90%;
 }
 
@@ -99,10 +99,6 @@ hr{
 
 #details p a:hover{
 	cursor: pointer;
-}
-
-.img-container{
-	
 }
 
 /* flex Details */
@@ -247,6 +243,22 @@ hr{
   top: 0;
 }
 
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
 /* Fading animation */
 .fades {
   -webkit-animation-name: fade;
@@ -278,24 +290,11 @@ hr{
 .flex-item {
     background-color: white;
     width: 24%;
-    height: 25em;
     margin: 2%;
  }
 
-.box-flex {
-	padding-bottom: 2%;
-	padding-top: 5%;
-	padding-left: 3%;
-	padding-right: 3%;
-}
-
 img.flex-item{
 	height: auto !important;
-}
-
-.box-flex h1{
-	color:orange;
-	text-transform: uppercase;
 }
 
 .padding-botton-1{
