@@ -19,6 +19,7 @@ function openContainer(div){
 
 function navBar(element){
 	div = '#' + element;
+	$('.navbar-toggle').trigger('click');
 	$('html,body').animate({scrollTop: $(div).offset().top},900);
 }
 

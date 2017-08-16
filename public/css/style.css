@@ -42,6 +42,9 @@ body {
 	background-color: black;
 	border-color: black;
 }
+.margin-left-auto{
+	margin-left: auto !important;
+}
 
 .nav>li>a:focus, .nav>li>a:hover {
 	background-color: orange !important;
