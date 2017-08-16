@@ -324,4 +324,12 @@ textarea {
 		width: 50%;
 	}
 	
+	.menu{
+		display: none;
+	}
+	
+	nav-img{
+		max-width: 25%;
+	}
+	
 }
