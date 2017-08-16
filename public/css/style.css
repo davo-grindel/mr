@@ -325,7 +325,6 @@ textarea {
 		width: 50%;
 	}
 	
-	
 	.navbar-header {
       	float: none;
   	}
@@ -361,5 +360,12 @@ textarea {
       	display:block !important;
   	}
 	
+	.menu{
+		display: none;
+	}
+	
+	nav-img{
+		max-width: 25%;
+	}
 	
 }
