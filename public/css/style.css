@@ -72,10 +72,6 @@ body {
 
 /* Commons */
 
-#slide img:hover {
-	cursor: pointer;
-}
-
 .hover:hover{
 	cursor: pointer;
 }
@@ -225,7 +221,8 @@ hr{
 	border: 0px;
     border-radius: 6px;
 	font-size: large;
-	
+	padding: 6px 6px 6px 6px;
+	top: 60%;
 }
 
 
@@ -350,6 +347,11 @@ textarea {
 }
 
 @media screen and (max-width: 991px) {
+	body{
+		padding-top: 8%;
+	}
+	
+	
 	.flex-item {
 		width: 50%;
 	}
