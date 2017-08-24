@@ -346,11 +346,23 @@ textarea {
     border-radius: 6px;
 }
 
+@media (max-width: @screen-xs) {
+    body{font-size: 10px;}
+}
+
+@media (max-width: @screen-sm) {
+    body{font-size: 14px;}
+}
+
+
 @media screen and (max-width: 991px) {
 	body{
 		padding-top: 8%;
 	}
 	
+	.text{
+		display: hidden;
+	}
 	
 	.flex-item {
 		width: 50%;
