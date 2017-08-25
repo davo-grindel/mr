@@ -1,0 +1,3 @@
+AddHandler x-httpd-php7 .php
+//Change default directory page
+DirectoryIndex /public
