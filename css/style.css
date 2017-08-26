@@ -1,21 +1,9 @@
 @charset "UTF-8";
 
 body {
-	background-color: #333333;
+	background-color: black;
 	padding-top: 5%;
-}
-
-/* footer */
-
-.footer {
-	background-color: #2e3436;
-	color: white;
-}
-
-.sub-footer {
-	background-color: #333333;
-	width: 90%;
-
+	overflow-x:hidden; 
 }
 
 .central-body {
@@ -194,22 +182,28 @@ hr{
   margin: auto;
 }
 
-.slideshow-container h1 {
+.img-slide{
+	z-index: -1;
+}
+
+.titleSlide1 {
 	position: absolute;
-	top: 20%;
+	top: 18%;
 	left: 15%;
 	width: 100%;
 	color: white;
-	font-size: -webkit-xxx-large;
+	font-size: 3vw;
+	margin-bottom: 5%;
 }
 
 .text {
-	width:30%;
+	width:60%;
 	position: absolute;
-	top: 38%;
+	top: 40%;
 	left: 15%;
 	color: white;
-	font-size: large;
+	font-size: 1vw;
+	margin-bottom: 5%;
 }
 
 #slideButton{
@@ -220,9 +214,29 @@ hr{
 	color: white;
 	border: 0px;
     border-radius: 6px;
-	font-size: large;
+	font-size: 1vw;
 	padding: 6px 6px 6px 6px;
 	top: 60%;
+}
+
+.titleSlide2 {
+	position: absolute;
+	width: 100%;
+	color: white;
+	font-size: 3vw;
+	left: 9%;
+	top: 55%;
+	text-shadow: 10px 10px 8px black;
+}
+
+.text3{
+	width:60%;
+	position: absolute;
+	top: 32%;
+	left: 15%;
+	color: white;
+	font-size: 1vw;
+	margin-bottom: 5%;
 }
 
 
@@ -328,23 +342,82 @@ img.flex-item{
 	padding-bottom: 2%;
 }
 
+/* footer */
+
+.footer {
+	background-color: #2e3436;
+	color: white;
+	font-size: medium;
+}
+
+.sub-footer {
+	background-color: #333333;
+	border-top: 1px solid black;
+	width: 100%;
+	padding-top: 1%;
+    padding-left: 10%;
+    padding-bottom: 1%;
+}
+
+.footerLink{
+	color: orange;
+	width: 100%;
+}
+
+.footerLink:hover{
+	color:orange;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+.list-group-item{
+	background-color: inherit;
+	border: 0px;
+	border-bottom: 1px solid gray;
+}
+
+.findUs ul{
+	width: 100%;
+}
+
 /* FORMS */
+
+.contact{
+	width: 100%;
+}
 
 input[type=text]{
 	background-color: #191919;
-	margin: 0 5px 5px 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 	color: white;
 	border: 0px;
     border-radius: 6px;
+    width: 80%;
+    height: auto;
+}
+
+.send{
+	width: 23%;
+	border-radius: 6px;
+	background-color: orange;
+	border: 0px;
+	color: black;
 }
 
 textarea {
 	background-color: #191919;
-	margin: 0 5px 5px 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 	color: white;
 	border: 0px;
     border-radius: 6px;
+    width: 80%;
+    min-height: 69px;
+    resize: none;
 }
+
+/* MEDIA QUERIES */
 
 @media (max-width: @screen-xs) {
     body{font-size: 10px;}
@@ -361,7 +434,11 @@ textarea {
 	}
 	
 	.text{
-		display: hidden;
+		display: none;
+	}
+	
+	.text3{
+		display: none;
 	}
 	
 	.flex-item {
