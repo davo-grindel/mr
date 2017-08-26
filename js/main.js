@@ -24,10 +24,22 @@ function navBar(element){
 }
 
 function enviar(){
+		
 	name = $("input[name=name]").val();
 	email = $("input[name=email]").val();
+	if(!validateEmail(email)){
+		$('.errorText').html('El mail es incorrecto');
+		$("#modalError").modal('show');
+		return false;
+	}
 	title = $("input[name=title]").val();
 	comment = $("#comment").val();
+	
+	if (name === "" || title === "" || comment === "" ){
+		$('.errorText').html('Debes completar todos los datos');
+		$("#modalError").modal('show');
+		return false;
+	}
 	
 	var arr = { "name":name, "email":email, "title":title, "comment":comment };
 	var data = JSON.stringify(arr);
@@ -38,8 +50,14 @@ function enviar(){
 		  contentType: "application/json",
 		  url: "/contact.php",
 		  data: data,
+		  beforeSend: function(){
+			    $("#loading").modal('show');
+			  },
 		  success: function(){
-			  alert("ok");
+			  $("#loading").modal('hide');
+			  $('.modalTitle').html('Mensaje Enviado')
+			  $('.errorText').html('');
+			  $("#modalError").modal('show');
 			  },
 		  dataType: "text"
 		});
@@ -50,3 +68,11 @@ function openModal(modal){
 	modal = '#' + modal
 	$(modal).modal({keyboard: true});
 }
+
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+
