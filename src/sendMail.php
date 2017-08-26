@@ -18,6 +18,27 @@ if(!is_object($obj)){
     throw new Exception('Received content contained invalid JSON!');
 }
 
+if (!filter_var($obj->email, FILTER_VALIDATE_EMAIL)) {
+    $error = "Invalid email format";
+    http_response_code(503);
+    print $error;
+    return;
+}
+
+if(ctype_space($obj->name) || ctype_space($obj->title) || ctype_space($obj->comment)){
+    $error = "White spaces";
+    http_response_code(503);
+    print $error;
+    return;
+}
+
+if(empty($obj->name) || empty($obj->title) || empty($obj->comment)){
+    $error = "Empty Fields";
+    http_response_code(503);
+    print $error;
+    return;
+}
+
 $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -32,8 +53,8 @@ $mail->Body    = 'Nombre: ' . $obj->name . '<br> Email: ' . $obj->email . '<br> 
 //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    print 'Message could not be sent.';
+    print 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'Message has been sent';
+    print 'Message has been sent';
 }

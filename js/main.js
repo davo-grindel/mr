@@ -59,6 +59,12 @@ function enviar(){
 			  $('.errorText').html('');
 			  $("#modalError").modal('show');
 			  },
+		  error: function (error) {
+			  $("#loading").modal('hide');
+			  $('.modalTitle').html('Error')
+			  $('.errorText').html('Se ha producido un error interno, por favor intentalo mas tarde.');
+			  $("#modalError").modal('show');
+			  },
 		  dataType: "text"
 		});
 	
