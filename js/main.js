@@ -35,7 +35,7 @@ function enviar(){
 	title = $("input[name=title]").val();
 	comment = $("#comment").val();
 	
-	if (name === "" || title === "" || comment === "" ){
+	if (isNullOrWhitespace(name) || isNullOrWhitespace(title) || isNullOrWhitespace(comment)){
 		$('.errorText').html('Debes completar todos los datos');
 		$("#modalError").modal('show');
 		return false;
@@ -75,4 +75,7 @@ function validateEmail(email) {
     return re.test(email);
 }
 
+function isNullOrWhitespace(input) {
+	  return !input || !input.trim();
+	}
 
