@@ -29,7 +29,21 @@ function enviar(){
 	title = $("input[name=title]").val();
 	comment = $("#comment").val();
 	
-	alert(name + " "+ email + " "+ title + " " + comment);
+	var arr = { "name":name, "email":email, "title":title, "comment":comment };
+	var data = JSON.stringify(arr);
+	
+	
+	$.ajax({
+		  type: "POST",
+		  contentType: "application/json",
+		  url: "/contact.php",
+		  data: data,
+		  success: function(){
+			  alert("ok");
+			  },
+		  dataType: "text"
+		});
+	
 }
 
 function openModal(modal){
