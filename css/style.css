@@ -441,6 +441,10 @@ textarea {
 		display: none;
 	}
 	
+	.quienes{
+		font-size: smaller;
+	}
+	
 	.flex-item {
 		width: 50%;
 	}
