@@ -43,8 +43,8 @@ $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->setFrom('contacto@arquitecturamr.com');
-$mail->addAddress('contacto@arquitecturamr.com');     // Add a recipient
+$mail->setFrom('info@arquitecturamr.com');
+$mail->addAddress('info@arquitecturamr.com');     // Add a recipient
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
