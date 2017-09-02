@@ -1,3 +1,4 @@
 AddHandler x-httpd-php7 .php
-//Change default directory page
-DirectoryIndex /public
+<FilesMatch "\.(html|htm|php|js|jpg|xml|txt|css)$">
+Header set Cache-Control "max-age=604800, public, must-revalidate"
+</FilesMatch>
